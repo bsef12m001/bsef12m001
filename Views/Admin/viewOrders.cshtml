@@ -1,0 +1,30 @@
+﻿@model List<XtremeMobiles.Models.Order>
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<table class="table table-bordered" style="margin-top:20px">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Customer Address</th>
+            <th>Order Product</th>
+            <th>Quantity</th>
+            <th>Order Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Customer.Name</td>
+                <td>@s.Customer.Address</td>
+                <td>@s.Product.Model</td>
+                <td>@s.quantity</td>
+                <td>@s.date</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
